@@ -81,3 +81,21 @@ footer {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.profile img {
+    width: 200px;
+    height: 300px; /* Вертикальное прямоугольное изображение */
+    object-fit: cover; /* Показывает центр изображения */
+    margin-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile div {
+    max-width: 600px;
+}
