@@ -63,7 +63,7 @@ footer {
     margin: 0 10px;
 }
 
-.social-links img {
+social-links img {
     width: 40px;
     height: 40px;
 }
@@ -98,4 +98,23 @@ footer {
 
 .profile div {
     max-width: 600px;
+}
+
+#comic-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#comic-img {
+    max-width: 100%;
+    height: auto;
+}
+
+#comic-title {
+    margin: 10px 0;
+}
+
+#comic-date {
+    color: #555;
 }
