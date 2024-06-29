@@ -4,7 +4,8 @@ module.exports = {
     entry: './src/script.ts',
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist'),
+        publicPath: '/-sum24-FWD_r.krainov/'
     },
     resolve: {
         extensions: ['.ts', '.js']
