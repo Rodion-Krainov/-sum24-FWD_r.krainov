@@ -19,7 +19,7 @@
 </header>
 <main>
     <section id="comic-section">
-        <img id="comic-img" alt="Comic Image" />
+        <img id="comic-img" alt="Comic Image"  src=""/>
         <h2 id="comic-title"></h2>
         <p id="comic-date"></p>
     </section>
@@ -39,61 +39,6 @@
         </a>
     </div>
 </footer>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const email = 'r.krainov@innopolis.university';
-        const comicSection = document.getElementById('comic-section');
-        const comicImg = document.getElementById('comic-img');
-        const comicTitle = document.getElementById('comic-title');
-        const comicDate = document.getElementById('comic-date');
-
-        // Fetch the comic ID
-        fetchComicId(email)
-            .then(comicId => fetchComic(comicId))
-            .then(comic => displayComic(comic))
-            .catch(error => console.error('Error fetching comic:', error));
-
-        function fetchComicId(email) {
-            const params = new URLSearchParams({ email });
-            const url = `https://fwd.innopolis.university/api/hw2?${params.toString()}`;
-            console.log('Fetching comic ID from URL:', url); // Logging the URL
-            return fetch(url)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok: ' + response.statusText);
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    console.log('Received comic ID:', data);
-                    return data;
-                });
-        }
-
-        function fetchComic(id) {
-            const url = `https://fwd.innopolis.university/api/comic?id=${id}`;
-            console.log('Fetching comic from URL:', url); // Logging the URL
-            return fetch(url)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok: ' + response.statusText);
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    console.log('Received comic data:', data);
-                    return data;
-                });
-        }
-
-        function displayComic(comic) {
-            comicImg.src = comic.img;
-            comicImg.alt = comic.alt;
-            comicTitle.textContent = comic.safe_title; // Use safe_title instead of title
-            const date = new Date(comic.year, comic.month - 1, comic.day);
-            comicDate.textContent = date.toLocaleDateString();
-        }
-    });
-</script>
+<script src="bundle.js"></script>
 </body>
 </html>
