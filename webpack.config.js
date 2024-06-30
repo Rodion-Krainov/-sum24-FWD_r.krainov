@@ -1,11 +1,11 @@
 const path = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: './src/script.ts',
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'),
-        publicPath: '/-sum24-FWD_r.krainov/'
     },
     resolve: {
         extensions: ['.ts', '.js']
@@ -19,6 +19,17 @@ module.exports = {
             }
         ]
     },
+    plugins: [
+        new CopyWebpackPlugin({
+            patterns: [
+                { from: './index.html', to: '.' },
+                { from: './comic.html', to: '.' },
+                { from: './images', to: 'images' },
+                { from: './styles', to: 'styles' },
+                { from: './pages', to: 'pages' },
+            ],
+        }),
+    ],
     devServer: {
         static: [
             {
