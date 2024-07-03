@@ -7,6 +7,7 @@ on:
   pull_request:
     branches:
       - main
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -25,17 +26,13 @@ jobs:
           node-version: '18'
 
       - name: Install dependencies
-        run: |
-          cd fwd-hw4
-          npm install
+        run: npm install
 
       - name: Build React app
-        run: |
-          cd fwd-hw4
-          npm run build
+        run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./fwd-hw4/build
+          publish_dir: ./build
