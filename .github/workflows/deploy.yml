@@ -22,9 +22,6 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Change to project directory
-        run: cd fwd-hw4
-
       - name: Install dependencies
         run: |
           cd fwd-hw4
