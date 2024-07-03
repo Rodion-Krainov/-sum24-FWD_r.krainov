@@ -25,17 +25,17 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build TypeScript and bundle
+      - name: Build React app
         run: npm run build
 
       - name: Archive build artifacts
         uses: actions/upload-artifact@v3
         with:
           name: build-artifact
-          path: ./dist
+          path: ./build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: ./build
