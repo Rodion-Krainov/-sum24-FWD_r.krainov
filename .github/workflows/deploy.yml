@@ -22,20 +22,27 @@ jobs:
         with:
           node-version: '18'
 
+      - name: Change to project directory
+        run: cd fwd-hw4
+
       - name: Install dependencies
-        run: npm install
+        run: |
+          cd fwd-hw4
+          npm install
 
       - name: Build React app
-        run: npm run build
+        run: |
+          cd fwd-hw4
+          npm run build
 
       - name: Archive build artifacts
         uses: actions/upload-artifact@v3
         with:
           name: build-artifact
-          path: ./build
+          path: ./fwd-hw4/build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+          publish_dir: ./fwd-hw4/build
