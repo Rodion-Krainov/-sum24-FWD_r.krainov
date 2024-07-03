@@ -1,25 +1,21 @@
 {
   "files": {
     "main.css": "/static/css/main.e6dfd4bb.css",
-    "main.js": "/static/js/main.1feb50c7.js",
+    "main.js": "/static/js/main.d3939c6d.js",
     "static/js/453.e14fba05.chunk.js": "/static/js/453.e14fba05.chunk.js",
-    "static/media/photo-7.jpg": "/static/media/photo-7.df5a1b7eb5abe90aec41.jpg",
     "static/media/photo-2.jpg": "/static/media/photo-2.350ad8a2f4162ba38c64.jpg",
-    "static/media/photo-6.jpg": "/static/media/photo-6.1757c9447d3c394546c5.jpg",
     "static/media/photo-3.jpg": "/static/media/photo-3.4c895e5db90d4406343c.jpg",
-    "static/media/photo-4.jpg": "/static/media/photo-4.17dfed67c2463e60e111.jpg",
     "static/media/photo-1.jpg": "/static/media/photo-1.fa50efded4e13d938832.jpg",
-    "static/media/photo-5.jpg": "/static/media/photo-5.ea4e21b27130e6ab99e3.jpg",
     "static/media/github.svg": "/static/media/github.adb057e9b81365542cdfd2327c007aa2.svg",
     "static/media/telegram.svg": "/static/media/telegram.b0589b5e724dd92cc132ddb6a0e049d9.svg",
     "index.html": "/index.html",
     "static/media/email.svg": "/static/media/email.3e0573bd719b7b1e1ea4066bc9e49c5a.svg",
     "main.e6dfd4bb.css.map": "/static/css/main.e6dfd4bb.css.map",
-    "main.1feb50c7.js.map": "/static/js/main.1feb50c7.js.map",
+    "main.d3939c6d.js.map": "/static/js/main.d3939c6d.js.map",
     "453.e14fba05.chunk.js.map": "/static/js/453.e14fba05.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6dfd4bb.css",
-    "static/js/main.1feb50c7.js"
+    "static/js/main.d3939c6d.js"
   ]
 }
