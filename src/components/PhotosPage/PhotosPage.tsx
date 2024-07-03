@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class PhotosPage extends Component {
     // Assuming the photos are imported at the top or fetched dynamically
-    photos = Array.from({ length: 7 }, (_, i) => require(`../../assets/photo-${i + 1}.jpg`));
+    photos = Array.from({ length: 3 }, (_, i) => require(`../../assets/photo-${i + 1}.jpg`));
 
     render() {
         return (
