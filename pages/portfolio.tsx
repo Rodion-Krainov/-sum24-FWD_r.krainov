@@ -23,8 +23,8 @@ const PortfolioPage = () => {
                 rel="noopener noreferrer"
               >
                 Live Demo
-              </a>{" "}
-              |{" "}
+              </a>{' '}
+              |{' '}
               <a
                 href="https://github.com/Rodion-Krainov/portfolio"
                 target="_blank"
@@ -52,8 +52,8 @@ const PortfolioPage = () => {
                 rel="noopener noreferrer"
               >
                 Live Demo
-              </a>{" "}
-              |{" "}
+              </a>{' '}
+              |{' '}
               <a
                 href="https://github.com/Rodion-Krainov/ecommerce"
                 target="_blank"
@@ -81,8 +81,8 @@ const PortfolioPage = () => {
                 rel="noopener noreferrer"
               >
                 Live Demo
-              </a>{" "}
-              |{" "}
+              </a>{' '}
+              |{' '}
               <a
                 href="https://github.com/Rodion-Krainov/blog"
                 target="_blank"

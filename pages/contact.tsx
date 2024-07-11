@@ -1,7 +1,7 @@
-import Image from "next/image";
-import githubIcon from "../public/github.svg";
-import telegramIcon from "../public/telegram.svg";
-import emailIcon from "../public/email.svg";
+import Image from 'next/image';
+import githubIcon from '../public/github.svg';
+import telegramIcon from '../public/telegram.svg';
+import emailIcon from '../public/email.svg';
 
 const ContactPage = () => {
   return (

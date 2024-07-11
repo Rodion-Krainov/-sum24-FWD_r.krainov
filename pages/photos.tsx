@@ -1,7 +1,7 @@
-import Image from "next/image";
-import photo1 from "../public/photo-1.jpg";
-import photo2 from "../public/photo-2.jpg";
-import photo3 from "../public/photo-3.jpg";
+import Image from 'next/image';
+import photo1 from '../public/photo-1.jpg';
+import photo2 from '../public/photo-2.jpg';
+import photo3 from '../public/photo-3.jpg';
 
 const PhotosPage = () => {
   const photos = [photo1, photo2, photo3];

@@ -23,11 +23,11 @@ async function fetchComicData(email: string): Promise<Comic | null> {
     try {
       const response = await fetch(url, { cache: 'force-cache' });
       if (!response.ok) {
-        throw new Error("Network response was not ok: " + response.statusText);
+        throw new Error('Network response was not ok: ' + response.statusText);
       }
       return await response.json();
     } catch (error) {
-      console.error("Error fetching comic ID:", error);
+      console.error('Error fetching comic ID:', error);
       return null;
     }
   };
@@ -38,22 +38,22 @@ async function fetchComicData(email: string): Promise<Comic | null> {
     try {
       const response = await fetch(url, { cache: 'force-cache' });
       if (!response.ok) {
-        throw new Error("Network response was not ok: " + response.statusText);
+        throw new Error('Network response was not ok: ' + response.statusText);
       }
       return await response.json();
     } catch (error) {
-      console.error("Error fetching comic:", error);
+      console.error('Error fetching comic:', error);
       return null;
     }
   };
 
   const comicId = await fetchComicId(email);
   if (comicId === null) {
-    throw new Error("Failed to fetch comic ID");
+    throw new Error('Failed to fetch comic ID');
   }
   const comic = await fetchComic(comicId);
   if (comic === null) {
-    throw new Error("Failed to fetch comic");
+    throw new Error('Failed to fetch comic');
   }
 
   return comic;
@@ -64,8 +64,10 @@ interface ComicPageProps {
   error: string | null;
 }
 
-export const getServerSideProps: GetServerSideProps<ComicPageProps> = async () => {
-  const email = "r.krainov@innopolis.university";
+export const getServerSideProps: GetServerSideProps<
+  ComicPageProps
+> = async () => {
+  const email = 'r.krainov@innopolis.university';
   let comic: Comic | null = null;
   let error: string | null = null;
 
@@ -95,17 +97,17 @@ const ComicPage: React.FC<ComicPageProps> = ({ comic, error }) => {
   const date = new Date(comic.year, comic.month - 1, comic.day);
 
   return (
-      <div>
-        <Image
-            src={comic.img}
-            alt={comic.alt}
-            width={500}
-            height={500}
-            style={{ width: '70%', height: 'auto' }}
-        />
-        <h2>{comic.safe_title}</h2>
-        <p>{dayjs(date).fromNow()}</p>
-      </div>
+    <div>
+      <Image
+        src={comic.img}
+        alt={comic.alt}
+        width={500}
+        height={500}
+        style={{ width: '70%', height: 'auto' }}
+      />
+      <h2>{comic.safe_title}</h2>
+      <p>{dayjs(date).fromNow()}</p>
+    </div>
   );
 };
 
